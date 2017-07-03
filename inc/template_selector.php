@@ -1,4 +1,4 @@
-<form action=""> <!--action tuscias tam kad griztume atgal ten pat -->
+<form class="form-inline" action="" method="POST"> <!--action tuscias tam kad griztume atgal ten pat -->
 	<select name="t" class="form-control">
 		<?php 
 			foreach ($templates as $template) {

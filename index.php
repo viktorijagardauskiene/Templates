@@ -7,18 +7,18 @@ $content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius
 
 $templates = ["lightyellow", "green", "orange", "pink"];
 
-if(isset($_GET['username'])) {
-	$title = "Cia lankosi ".$_GET['username']; 
-	$_SESSION['user'] = $_GET['username'];
+if(isset($_POST['username'])) {
+	$title = "Cia lankosi ".$_POST['username']; 
+	$_SESSION['user'] = $_POST['username'];
 } elseif (isset($_SESSION['user'])) {
 	$title = "Cia lankosi ".$_SESSION['user']; 
 }
 
 
 
-if (isset($_GET['t'])) { // uzkrovus puslapi rodo klaida nes nera jokios "t" reiksme, todel patikrinam ar uzkrovus puslapi buvo pasirinkta kokia reiksme, jei ne tada naudoja default pirma masyvo reiksme
-$template_name = $_GET['t']; // template_selector/<select> name yra "t"
-$_SESSION['session_template'] = $_GET['t']; // sesijai priduodam reiksme ta kuria pirmiausia pasirinksim spalva, ir ji isliks tol kol isjungsim narsykle pvz: vaikstant e-shope islieka prekes krepselyje, o i duombaze eina tik tada kai paspaudi pirkti, kitaip info nera saugoma
+if (isset($_POST['t'])) { // uzkrovus puslapi rodo klaida nes nera jokios "t" reiksme, todel patikrinam ar uzkrovus puslapi buvo pasirinkta kokia reiksme, jei ne tada naudoja default pirma masyvo reiksme
+$template_name = $_POST['t']; // template_selector/<select> name yra "t"
+$_SESSION['session_template'] = $_POST['t']; // sesijai priduodam reiksme ta kuria pirmiausia pasirinksim spalva, ir ji isliks tol kol isjungsim narsykle pvz: vaikstant e-shope islieka prekes krepselyje, o i duombaze eina tik tada kai paspaudi pirkti, kitaip info nera saugoma
 } else if (isset($_SESSION['session_template'])) {
 	$template_name = $_SESSION['session_template']; 
 } else {
@@ -28,5 +28,5 @@ $_SESSION['session_template'] = $_GET['t']; // sesijai priduodam reiksme ta kuri
 
 include 'sablonai/' . $template_name . '.php';
 
- 
+
 ?>
