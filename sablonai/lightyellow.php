@@ -18,6 +18,7 @@
 
                 include "inc/template_selector.php"; 
                 include "inc/username.php";
+                include "inc/variables.php";
 
             ?>
                 

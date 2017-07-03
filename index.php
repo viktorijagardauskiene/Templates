@@ -27,5 +27,6 @@ $_SESSION['session_template'] = $_GET['t']; // sesijai priduodam reiksme ta kuri
 
 
 include 'sablonai/' . $template_name . '.php';
+
  
 ?>
