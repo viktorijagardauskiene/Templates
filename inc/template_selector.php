@@ -6,5 +6,5 @@
 			}
 		?>
 	</select>
-	<button type="submit">Keisti</button>
+	<button class="btn btn-default" type="submit">Keisti</button>
 </form>
